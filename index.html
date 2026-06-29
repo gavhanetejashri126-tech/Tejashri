@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tejashri · Portfolio</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #0a0a1a 0%, #1a0a2e 30%, #0d1b2a 60%, #1a0a2e 100%);
+            color: #e8e2f5;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+            padding-top: 20px;
+        }
+
+        /* NAVBAR */
+        .navbar-custom {
+            background: rgba(10, 10, 26, 0.85);
+            backdrop-filter: blur(22px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1050;
+        }
+
+        .navbar-custom .navbar-brand {
+            font-weight: 800;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #00d4ff, #ff2d75, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .navbar-custom .nav-link {
+            color: #c8c0da !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: 0.2s;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #00d4ff !important;
+        }
+
+        /* HERO */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            background: radial-gradient(circle at 30% 20%, #1a0a3a, #0a0a1a 92%);
+        }
+
+        .profile-img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #00d4ff;
+            box-shadow: 0 0 44px rgba(0, 212, 255, 0.20);
+            background: #1a1333;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .hero-title {
+            font-weight: 800;
+            font-size: 3.8rem;
+            background: linear-gradient(to right, #f0ecfa, #00d4ff, #ff2d75);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            color: #b9aed6;
+            font-size: 1.3rem;
+        }
+
+        .hero-badge {
+            background: rgba(0, 212, 255, 0.08);
+            padding: 8px 22px;
+            border-radius: 60px;
+            border: 1px solid rgba(0, 212, 255, 0.12);
+            display: inline-block;
+            color: #00d4ff;
+        }
+
+        .btn-neon {
+            background: linear-gradient(135deg, #00d4ff, #ff2d75);
+            border: none;
+            padding: 14px 44px;
+            border-radius: 60px;
+            font-weight: 700;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .btn-neon:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 50px #00d4ff;
+            color: #fff;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            font-weight: 700;
+            font-size: 2.4rem;
+            color: #f0ecfa;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ff2d75);
+            border-radius: 10px;
+            margin-top: 8px;
+        }
+
+        .section-title-wrapper {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /* CARDS */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 32px;
+            padding: 40px 45px;
+            transition: 0.3s;
+        }
+
+        .glass-card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-4px);
+        }
+
+        .glass-card p {
+            color: #d5cee6;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .neo-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 28px;
+            padding: 28px 22px;
+            transition: 0.4s ease;
+            height: 100%;
+        }
+
+        .neo-card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-8px);
+        }
+
+        .neo-card h4 {
+            font-weight: 700;
+            color: #f0ecfa;
+        }
+
+        .neo-card p {
+            color: #b9b0d0;
+        }
+
+        /* SKILLS */
+        .skill-item h5 {
+            font-weight: 600;
+            color: #d5cee6;
+            margin-bottom: 6px;
+        }
+
+        .progress {
+            height: 14px;
+            border-radius: 40px;
+            background: #2a2340;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            border-radius: 40px;
+            background: linear-gradient(90deg, #00d4ff, #ff2d75);
+            font-weight: 700;
+            font-size: 0.7rem;
+            color: #fff;
+            line-height: 14px;
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* CERTIFICATIONS */
+        .cert-list .list-group-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            color: #d5cee6;
+            font-weight: 500;
+            padding: 16px 24px;
+            border-radius: 20px !important;
+            margin-bottom: 12px;
+        }
+
+        .cert-list .list-group-item:hover {
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        /* CONTACT */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 48px;
+            padding: 40px;
+            transition: 0.3s ease;
+            height: 100%;
+        }
+
+        .contact-card:hover {
+            border-color: #00d4ff;
+        }
+
+        .contact-card h2 {
+            font-weight: 700;
+            color: #f0ecfa;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #d5cee6;
+            transition: 0.3s;
+        }
+
+        .contact-info p:hover {
+            color: #00d4ff;
+        }
+
+        .contact-info i {
+            width: 30px;
+            color: #00d4ff;
+        }
+
+        .social-btn {
+            border-radius: 60px;
+            padding: 10px 24px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: #eae5f5;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 8px 5px 0;
+        }
+
+        .social-btn:hover {
+            background: linear-gradient(135deg, #00d4ff, #ff2d75);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .whatsapp-contact-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(37, 211, 102, 0.08);
+            border: 1px solid rgba(37, 211, 102, 0.15);
+            border-radius: 60px;
+            padding: 10px 24px;
+            color: #25d366;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .whatsapp-contact-icon:hover {
+            background: linear-gradient(135deg, #25d366, #128C7E);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .form-control-custom {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 14px 18px;
+            color: #f0ecfa;
+        }
+
+        .form-control-custom::placeholder {
+            color: #7d72a0;
+        }
+
+        .form-control-custom:focus {
+            background: rgba(0, 212, 255, 0.06);
+            border-color: #00d4ff;
+            color: #fff;
+        }
+
+        .btn-send {
+            background: linear-gradient(135deg, #00d4ff, #ff2d75);
+            border: none;
+            border-radius: 60px;
+            padding: 14px 40px;
+            font-weight: 700;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .btn-send:hover {
+            box-shadow: 0 8px 40px #00d4ff;
+            color: #fff;
+            transform: scale(1.04);
+        }
+
+        /* RESUME BUTTONS */
+        .btn-outline-neon {
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            border-radius: 60px;
+            padding: 10px 32px;
+            font-weight: 600;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            background: transparent;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .btn-outline-neon:hover {
+            background: linear-gradient(135deg, #00d4ff, #ff2d75);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .resume-box {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(8px);
+            border-radius: 40px;
+            padding: 40px 45px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            text-align: center;
+        }
+
+        .resume-box:hover {
+            border-color: #00d4ff;
+        }
+
+        .resume-box h3 {
+            font-weight: 700;
+            color: #f0ecfa;
+        }
+
+        .resume-box p {
+            color: #b9b0d0;
+        }
+
+        /* FIXED BOTTOM BAR */
+        .fixed-bottom-bar {
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 25px;
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        .fixed-bottom-bar .left-icon,
+        .fixed-bottom-bar .right-icon {
+            pointer-events: auto;
+        }
+
+        .wa-float-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25d366, #128C7E);
+            color: #fff;
+            font-size: 34px;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.30);
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .wa-float-link:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 45px rgba(37, 211, 102, 0.50);
+        }
+
+        .wa-float-link .wa-tooltip {
+            position: absolute;
+            left: 72px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: #e8e2f5;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        .wa-float-link:hover .wa-tooltip {
+            opacity: 1;
+            visibility: visible;
+            left: 78px;
+        }
+
+        #scrollTopBtn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff, #ff2d75);
+            color: #fff;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.4s;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+        }
+
+        #scrollTopBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        #scrollTopBtn:hover {
+            transform: scale(1.15);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            padding: 28px 0;
+            color: #7d72a0;
+            text-align: center;
+        }
+
+        /* ===== MODAL STYLES ===== */
+        .modal-content {
+            background: rgba(20, 15, 40, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 32px;
+            color: #e8e2f5;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 20px 30px;
+        }
+
+        .modal-header .modal-title {
+            font-weight: 700;
+            color: #f0ecfa;
+            font-size: 1.4rem;
+        }
+
+        .modal-header .modal-title i {
+            color: #00d4ff;
+            margin-right: 12px;
+        }
+
+        .modal-header .btn-close {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #b9b0d0;
+            opacity: 0.7;
+            transition: 0.3s;
+            padding: 0 10px;
+        }
+
+        .modal-header .btn-close:hover {
+            color: #ff2d75;
+            opacity: 1;
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 30px 35px 40px;
+            max-height: 65vh;
+            overflow-y: auto;
+        }
+
+        .modal-body::-webkit-scrollbar {
+            width: 6px;
+        }
+        .modal-body::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+        .modal-body::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #00d4ff, #ff2d75);
+            border-radius: 10px;
+        }
+
+        .modal-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 16px 30px 24px;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .modal-footer .btn {
+            border-radius: 60px;
+            padding: 10px 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-close-modal {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #b9b0d0;
+        }
+
+        .btn-close-modal:hover {
+            background: #ff2d75;
+            border-color: #ff2d75;
+            color: #fff;
+        }
+
+        .btn-download-modal {
+            background: linear-gradient(135deg, #00d4ff, #ff2d75);
+            border: none;
+            color: #fff;
+        }
+
+        .btn-download-modal:hover {
+            transform: scale(1.05);
+            color: #fff;
+        }
+
+        /* Resume content inside modal */
+        .resume-content h4 {
+            color: #00d4ff;
+            font-weight: 700;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .resume-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .resume-content p,
+        .resume-content li {
+            color: #d5cee6;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .resume-content ul,
+        .resume-content ol {
+            padding-left: 22px;
+            color: #d5cee6;
+        }
+
+        .resume-content ul li,
+        .resume-content ol li {
+            margin-bottom: 4px;
+        }
+
+        .resume-content hr {
+            border-color: rgba(255, 255, 255, 0.06);
+            margin: 16px 0;
+        }
+
+        .resume-content .signature-line {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .resume-content .signature-line .name {
+            font-weight: 700;
+            color: #f0ecfa;
+            letter-spacing: 1px;
+        }
+
+        .modal.fade .modal-dialog {
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+        .modal.show .modal-dialog {
+            transform: scale(1);
+        }
+
+        .modal-backdrop {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.6rem;
+            }
+            .profile-img {
+                width: 220px;
+                height: 220px;
+            }
+            .glass-card {
+                padding: 28px 22px;
+            }
+            .contact-card {
+                padding: 28px 20px;
+            }
+            .resume-box {
+                padding: 28px 20px;
+            }
+            .modal-body {
+                padding: 20px;
+                max-height: 55vh;
+            }
+            .modal-header {
+                padding: 15px 20px;
+            }
+            .modal-footer {
+                padding: 12px 20px 18px;
+                flex-wrap: wrap;
+            }
+            .modal-footer .btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .profile-img {
+                width: 180px;
+                height: 180px;
+            }
+            .modal-body {
+                padding: 15px;
+                max-height: 50vh;
+            }
+            .modal-header .modal-title {
+                font-size: 1.1rem;
+            }
+            .modal-header .btn-close {
+                font-size: 1.4rem;
+            }
+            .resume-content h4 {
+                font-size: 0.85rem;
+            }
+            .resume-content p,
+            .resume-content li {
+                font-size: 0.85rem;
+            }
+            .modal-footer .btn {
+                padding: 6px 16px;
+                font-size: 0.8rem;
+            }
+            .resume-box {
+                padding: 20px 15px;
+            }
+            .btn-outline-neon {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+            .fixed-bottom-bar {
+                bottom: 15px;
+                padding: 0 12px;
+            }
+            .wa-float-link {
+                width: 44px;
+                height: 44px;
+                font-size: 24px;
+            }
+            #scrollTopBtn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
+        /* Animations */
+        .anim-fade-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        .anim-fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .anim-zoom-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s ease;
+        }
+        .anim-zoom-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .anim-flip-in {
+            opacity: 0;
+            transform: perspective(600px) rotateY(30deg) scale(0.9);
+            transition: all 0.8s ease;
+        }
+        .anim-flip-in.visible {
+            opacity: 1;
+            transform: perspective(600px) rotateY(0deg) scale(1);
+        }
+
+        .anim-fade-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+        .anim-fade-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .anim-fade-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+        .anim-fade-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .anim-bounce-in {
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .anim-bounce-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .anim-slide-down {
+            opacity: 0;
+            transform: translateY(-40px);
+            transition: all 0.8s ease;
+        }
+        .anim-slide-down.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
+        .delay-5 {
+            transition-delay: 0.5s;
+        }
+
+        /* Hero animations */
+        .hero-badge-custom {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+            }
+        }
+        .hero-title-custom {
+            animation: glow 3s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0%,
+            100% {
+                filter: brightness(1);
+            }
+            50% {
+                filter: brightness(1.2);
+            }
+        }
+                /* ===== CAPTCHA STYLES ===== */
+        .captcha-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            flex-wrap: wrap;
+        }
+        
+        .captcha-box .captcha-text {
+            font-weight: 800;
+            font-size: 1.6rem;
+            letter-spacing: 6px;
+            color: #f0ecfa;
+            background: rgba(0, 212, 255, 0.08);
+            padding: 4px 18px;
+            border-radius: 12px;
+            font-family: 'Courier New', monospace;
+            user-select: none;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .captcha-box .captcha-input {
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .captcha-box .captcha-input input {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 10px 16px;
+            color: #f0ecfa;
+            width: 100%;
+            font-weight: 500;
+            outline: none;
+            transition: 0.3s;
+        }
+        
+        .captcha-box .captcha-input input::placeholder {
+            color: #7d72a0;
+        }
+        
+        .captcha-box .captcha-input input:focus {
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.04);
+        }
+        
+        .captcha-box .captcha-refresh {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b9b0d0;
+            transition: 0.3s;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        
+        .captcha-box .captcha-refresh:hover {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            transform: rotate(60deg);
+            border-color: #00d4ff;
+        }
+        
+        @media (max-width: 576px) {
+            .captcha-box {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .captcha-box .captcha-text {
+                text-align: center;
+                font-size: 1.4rem;
+                letter-spacing: 4px;
+            }
+            .captcha-box .captcha-refresh {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="#">Tejashri<span style="color:#00d4ff;">.</span></a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon" style="filter: invert(0.6);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="#home">🏠 Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">👤 About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">💻 Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#resume">📄 Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">🎓 Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">📁 Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">🏆 Certificates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">📧 Contact</a></li>
+                <!-- Language Translator -->
+                <li class="nav-item">
+                    <div class="translate-container">
+                        <div id="google_translate_element"></div>
+                        <!-- Language Translator Dropdown in Navbar -->
+<li class="nav-item">
+    <div class="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
+</li>
+                    </div>
+                </li>
+            </ul>
+        </div>    
+    </div>
+</nav>  
+
+
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- HOME -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="hero-badge mb-3 hero-badge-custom">
+                        <i class="fas fa-code me-2"></i>Computer Engineering
+                    </span>
+                    <h1 class="hero-title hero-title-custom">Tejashri Gavhane</h1>
+                    <h3 class="hero-sub fw-light mt-2">Diploma in Computer Engineering</h3>
+                    <p class="mt-3" style="color:#9b90b5;">Student at Shivaji Polytechnic College, Sangola</p>
+                    <a href="#contact" class="btn btn-neon mt-3">
+                        <i class="fas fa-paper-plane me-2"></i>Contact Me
+                    </a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="tejashri.jpeg" alt="Tejashri" class="profile-img img-fluid" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper anim-fade-up" id="aboutTitle">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="glass-card anim-fade-up delay-1" id="aboutCard">
+                <p><strong class="text-white">Hello! I'm Tejashri Gavhane</strong>, a passionate Diploma student in Computer Engineering at Shivaji Polytechnic College, Sangola. I have a strong interest in web development, programming, and modern technology.</p>
+                <p>My journey in computer engineering has helped me develop knowledge in HTML, CSS, JavaScript, Bootstrap, C, C++, and database concepts. I love designing attractive, responsive websites.</p>
+                <p>Apart from academics, I actively explore new technologies and work on personal projects to improve my coding and problem-solving abilities.</p>
+                <p class="mb-0">My goal is to build innovative web applications and grow as a professional in the field of technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper anim-zoom-in" id="skillsTitle">
+                <h2 class="section-title">Skills</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="skill-item anim-zoom-in delay-1">
+                        <h5>HTML</h5>
+                        <div class="progress"><div class="progress-bar" style="width:95%">95%</div></div>
+                    </div>
+                    <div class="skill-item anim-zoom-in delay-2">
+                        <h5>CSS</h5>
+                        <div class="progress"><div class="progress-bar" style="width:90%">90%</div></div>
+                    </div>
+                    <div class="skill-item anim-zoom-in delay-3">
+                        <h5>Bootstrap</h5>
+                        <div class="progress"><div class="progress-bar" style="width:85%">85%</div></div>
+                    </div>
+                    <div class="skill-item anim-zoom-in delay-4">
+                        <h5>JavaScript</h5>
+                        <div class="progress"><div class="progress-bar" style="width:75%">75%</div></div>
+                    </div>
+                    <div class="skill-item anim-zoom-in delay-5">
+                        <h5>C Programming</h5>
+                        <div class="progress"><div class="progress-bar" style="width:80%">80%</div></div>
+                    </div>
+                    <div class="skill-item anim-zoom-in delay-5">
+                        <h5>C++</h5>
+                        <div class="progress"><div class="progress-bar" style="width:78%">78%</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME - WITH MODAL -->
+    <section id="resume" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper anim-slide-down" id="resumeTitle">
+                <h2 class="section-title">Resume</h2>
+            </div>
+            <div class="resume-box anim-slide-down delay-1" id="resumeBox">
+                <h3><i class="fas fa-file-alt me-2" style="color:#00d4ff;"></i>My Resume</h3>
+                <p>Click below to view or download my resume</p>
+
+                <!-- View Button - Opens Modal -->
+                <button class="btn-outline-neon me-2" data-bs-toggle="modal" data-bs-target="#resumeModal">
+                    <i class="fas fa-eye me-2"></i>View
+                </button>
+
+                <!-- Download Button - Opens Modal then download -->
+                <button class="btn-outline-neon" id="downloadBtn">
+                    <i class="fas fa-download me-2"></i>Download
+                </button>
+
+                <p class="mt-3 small" style="color:#7d72a0;">
+                    <i class="fas fa-info-circle me-1"></i>
+                    Click <strong style="color:#00d4ff;">View</strong> to see resume in popup
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESUME MODAL ===== -->
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-file-alt"></i> Tejashri Gavhane - Resume
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="resume-content">
+
+                        <h4><i class="fas fa-bullseye me-2" style="color:#00d4ff;"></i>Career Objective</h4>
+                        <p>To build a successful career in the field of Computer Engineering by utilizing my technical knowledge and skills while continuing to learn and grow.</p>
+
+                        <hr />
+
+                        <h4><i class="fas fa-user me-2" style="color:#00d4ff;"></i>Personal Information</h4>
+                        <p>
+                            <strong>Name:</strong> Tejashri Gavhane<br />
+                            <strong>Email:</strong> gavhanetejashri126@gmail.com<br />
+                            <strong>Mobile:</strong> +91 8830054143<br />
+                            <strong>Date of Birth:</strong> 16 June 2008<br />
+                            <strong>Address:</strong> At Post - Akola, Tal - Sangola, Dist - Solapur, Maharashtra
+                        </p>
+
+                        <hr />
+
+                        <h4><i class="fas fa-graduation-cap me-2" style="color:#00d4ff;"></i>Educational Qualification</h4>
+                        <p>
+                            <strong>Diploma in Computer Engineering</strong> <span style="color:#00d4ff; font-weight:600;">(Pursuing)</span><br />
+                            <strong>Institute:</strong> Shivaji Polytechnic, Sangola<br />
+                            <strong>University:</strong> MSBTE, Mumbai<br />
+                            <strong>Year of Study:</strong> Second Year<br />
+                            <strong>Percentage:</strong> 85% <span style="color:#b9b0d0;">(First Year)</span>
+                        </p>
+
+                        <hr />
+
+                        <h4><i class="fas fa-code me-2" style="color:#00d4ff;"></i>Technical Skills</h4>
+                        <ul>
+                            <li><strong>HTML</strong> – Structured Web Development</li>
+                            <li><strong>C Programming</strong> – Procedural Programming</li>
+                            <li><strong>MS Office</strong> – Word, Excel, PowerPoint</li>
+                            <li><strong>Python</strong> – Basic Programming</li>
+                            <li><strong>Java Programming</strong> – OOP Concepts</li>
+                        </ul>
+
+                        <hr />
+
+                        <h4><i class="fas fa-project-diagram me-2" style="color:#00d4ff;"></i>Academic Projects</h4>
+                        <ul>
+                            <li><strong>Web Project</strong> – using HTML</li>
+                            <li><strong>Calculator</strong> – using C Language</li>
+                            <li><strong>Cricket Management System</strong> – using Java</li>
+                        </ul>
+
+                        <hr />
+
+                        <h4><i class="fas fa-trophy me-2" style="color:#00d4ff;"></i>Achievements</h4>
+                        <ul>
+                            <li>Secured <strong>First Class with Distinction</strong> in First Year</li>
+                            <li>Participated in <strong>State Level Quiz Competition</strong></li>
+                        </ul>
+
+                        <hr />
+
+                        <h4><i class="fas fa-file-signature me-2" style="color:#00d4ff;"></i>Declaration</h4>
+                        <p>I hereby declare that the above information is true and correct to the best of my knowledge.</p>
+
+                        <div class="signature-line">
+                            <div>
+                                <strong>Date:</strong> 02/06/2026<br />
+                                <strong>Place:</strong> Sangola
+                            </div>
+                            <div class="name">GAVHANE TEJASHRI</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Close
+                    </button>
+                    <button type="button" class="btn btn-download-modal" id="downloadFromModal">
+                        <i class="fas fa-download me-2"></i>Download PDF
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper anim-flip-in" id="eduTitle">
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="neo-card anim-flip-in delay-1" id="eduCard" style="border-left: 4px solid #00d4ff;">
+                <h4><i class="fas fa-graduation-cap me-2" style="color:#00d4ff;"></i>Diploma in Computer Engineering</h4>
+                <p><strong style="color:#d5cee6;">Institute:</strong> Shivaji Polytechnic College, Sangola</p>
+                <p><strong style="color:#d5cee6;">Duration:</strong> 2024 – Present</p>
+                <p>I am currently pursuing a Diploma in Computer Engineering. My studies cover programming, web development, database management, computer networks, and software engineering concepts.</p>
+                <p class="mb-0">Through this course, I aim to build a strong foundation in computer technology and prepare for a successful career in software development.</p>
+            </div>
+        </div>
+    </section>
+
+       <!-- PROJECTS -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper anim-fade-left" id="projectsTitle">
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="row g-4">
+                
+                <!-- Project 1: Portfolio Website -->
+                <div class="col-md-4 anim-fade-left delay-1">
+                    <div class="neo-card text-center" style="cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.04);" 
+                         onclick="openProject('portfolio')"
+                         onmouseover="this.style.borderColor='#00d4ff'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 40px rgba(0,212,255,0.1)';"
+                         onmouseout="this.style.borderColor='rgba(255,255,255,0.04)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                        <i class="fas fa-globe fa-3x mb-3" style="color:#00d4ff;"></i>
+                        <h4>Portfolio Website</h4>
+                        <p>Personal portfolio using HTML, CSS, Bootstrap, and neon UI.</p>
+                        <span style="color: #7d72a0; font-size: 0.75rem;">
+                            <i class="fas fa-hand-pointer me-1"></i> Click to view
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Calculator -->
+                <div class="col-md-4 anim-fade-left delay-2">
+                    <div class="neo-card text-center" style="cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.04);" 
+                         onclick="openProject('calculator')"
+                         onmouseover="this.style.borderColor='#00d4ff'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 40px rgba(0,212,255,0.1)';"
+                         onmouseout="this.style.borderColor='rgba(255,255,255,0.04)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                        <i class="fas fa-calculator fa-3x mb-3" style="color:#00d4ff;"></i>
+                        <h4>Calculator</h4>
+                        <p>Simple calculator built with HTML, CSS, and JavaScript.</p>
+                        <span style="color: #7d72a0; font-size: 0.75rem;">
+                            <i class="fas fa-hand-pointer me-1"></i> Click to open
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Landing Page -->
+                <div class="col-md-4 anim-fade-left delay-3">
+                    <div class="neo-card text-center" style="cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.04);" 
+                         onclick="openProject('landing')"
+                         onmouseover="this.style.borderColor='#00d4ff'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 40px rgba(0,212,255,0.1)';"
+                         onmouseout="this.style.borderColor='rgba(255,255,255,0.04)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                        <i class="fas fa-paint-brush fa-3x mb-3" style="color:#00d4ff;"></i>
+                        <h4>Landing Page</h4>
+                        <p>Creative landing page with modern glass-morphism design.</p>
+                        <span style="color: #7d72a0; font-size: 0.75rem;">
+                            <i class="fas fa-hand-pointer me-1"></i> Click to view
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECT POPUPS (Add this after Projects section) ===== -->
+
+    <!-- Portfolio Popup -->
+    <div id="portfolioPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+         background: rgba(10,10,26,0.92); backdrop-filter: blur(16px); z-index: 9999; 
+         justify-content: center; align-items: center; padding: 20px; overflow-y: auto;">
+        
+        <div style="background: rgba(20,15,40,0.98); border: 1px solid rgba(255,255,255,0.08); 
+                    border-radius: 32px; padding: 40px; max-width: 600px; width: 100%; 
+                    box-shadow: 0 30px 80px rgba(0,0,0,0.9); position: relative; max-height: 90vh; overflow-y: auto;">
+            
+            <!-- Close Button -->
+            <button onclick="closeProject('portfolio')" style="position: sticky; top: 0; float: right; 
+                    background: rgba(255,45,117,0.2); border: none; color: #ff2d75; 
+                    width: 44px; height: 44px; border-radius: 50%; font-size: 22px; cursor: pointer;
+                    transition: 0.3s; margin-bottom: 10px; z-index: 10;"
+                    onmouseover="this.style.background='#ff2d75'; this.style.color='#fff';"
+                    onmouseout="this.style.background='rgba(255,45,117,0.2)'; this.style.color='#ff2d75';">
+                ✕
+            </button>
+            
+            <div style="clear: both;"></div>
+            
+            <div style="text-align: center;">
+                <i class="fas fa-globe fa-4x mb-3" style="color:#00d4ff;"></i>
+                <h2 style="color: #f0ecfa; font-weight: 700;">Portfolio Website</h2>
+                <p style="color: #b9b0d0; font-size: 1.05rem; line-height: 1.8;">
+                    This is my personal portfolio website built using HTML, CSS, Bootstrap, and modern neon UI design.
+                </p>
+                
+                <div style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 20px; margin: 20px 0; text-align: left;">
+                    <h4 style="color: #00d4ff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-code me-2"></i>Technologies Used
+                    </h4>
+                    <ul style="color: #d5cee6; list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                            <i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px;"></i>HTML5
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                            <i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px;"></i>CSS3
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                            <i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px;"></i>Bootstrap 5
+                        </li>
+                        <li style="padding: 8px 0;">
+                            <i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px;"></i>JavaScript
+                        </li>
+                    </ul>
+                </div>
+                
+                <button onclick="closeProject('portfolio')" class="btn btn-neon">
+                    <i class="fas fa-times me-2"></i>Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculator Popup -->
+    <div id="calculatorPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+         background: rgba(10,10,26,0.92); backdrop-filter: blur(16px); z-index: 9999; 
+         justify-content: center; align-items: center; padding: 20px;">
+        
+        <div style="background: rgba(20,15,40,0.98); border: 1px solid rgba(255,255,255,0.08); 
+                    border-radius: 32px; padding: 30px; max-width: 420px; width: 100%; 
+                    box-shadow: 0 30px 80px rgba(0,0,0,0.9); position: relative;">
+            
+            <!-- Close Button -->
+            <button onclick="closeProject('calculator')" style="position: absolute; top: 12px; right: 16px; 
+                    background: transparent; border: none; color: #b9b0d0; font-size: 24px; cursor: pointer;
+                    transition: 0.3s;"
+                    onmouseover="this.style.color='#ff2d75';"
+                    onmouseout="this.style.color='#b9b0d0';">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h4 style="color: #f0ecfa; margin-bottom: 20px; text-align: center; margin-top: 5px;">
+                <i class="fas fa-calculator" style="color: #00d4ff; margin-right: 12px;"></i>Calculator
+            </h4>
+            
+            <!-- Calculator Display -->
+            <input type="text" id="calcDisplayPopup" style="width: 100%; padding: 16px 20px; font-size: 2rem; 
+                background: rgba(0,0,0,0.3); border: 1px solid rgba(0,212,255,0.2); 
+                border-radius: 16px; color: #f0ecfa; text-align: right; margin-bottom: 16px; 
+                outline: none; font-weight: 700; height: 75px;" readonly value="0" />
+            
+            <!-- Calculator Buttons -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+                <button onclick="calcInputPopup('C')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,45,117,0.2); color: #ff2d75;">C</button>
+                <button onclick="calcInputPopup('±')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.05); color: #b9b0d0;">±</button>
+                <button onclick="calcInputPopup('%')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.05); color: #b9b0d0;">%</button>
+                <button onclick="calcInputPopup('÷')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(0,212,255,0.15); color: #00d4ff;">÷</button>
+                
+                <button onclick="calcInputPopup('7')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">7</button>
+                <button onclick="calcInputPopup('8')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">8</button>
+                <button onclick="calcInputPopup('9')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">9</button>
+                <button onclick="calcInputPopup('×')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(0,212,255,0.15); color: #00d4ff;">×</button>
+                
+                <button onclick="calcInputPopup('4')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">4</button>
+                <button onclick="calcInputPopup('5')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">5</button>
+                <button onclick="calcInputPopup('6')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">6</button>
+                <button onclick="calcInputPopup('−')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(0,212,255,0.15); color: #00d4ff;">−</button>
+                
+                <button onclick="calcInputPopup('1')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">1</button>
+                <button onclick="calcInputPopup('2')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">2</button>
+                <button onclick="calcInputPopup('3')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">3</button>
+                <button onclick="calcInputPopup('+')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(0,212,255,0.15); color: #00d4ff;">+</button>
+                
+                <button onclick="calcInputPopup('0')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s; grid-column: span 2;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">0</button>
+                <button onclick="calcInputPopup('.')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 600; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,255,255,0.04); color: #e8e2f5;">.</button>
+                <button onclick="calcInputPopup('⌫')" style="padding: 14px 0; font-size: 1.1rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s;
+                    background: rgba(255,45,117,0.2); color: #ff2d75;">⌫</button>
+                
+                <button onclick="calcInputPopup('=')" style="padding: 16px 0; font-size: 1.4rem; font-weight: 700; 
+                    border: none; border-radius: 12px; cursor: pointer; transition: 0.2s; grid-column: span 4;
+                    background: linear-gradient(135deg, #00d4ff, #ff2d75); color: #fff; 
+                    box-shadow: 0 4px 20px rgba(0,212,255,0.3);">=</button>
+            </div>
+            
+            <p style="color: #7d72a0; font-size: 0.7rem; margin-top: 12px; text-align: center;">
+                <i class="fas fa-keyboard me-1"></i> Keyboard supported: Type numbers & operators
+            </p>
+        </div>
+    </div>
+
+    <!-- Landing Page Popup -->
+    <div id="landingPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+         background: rgba(10,10,26,0.92); backdrop-filter: blur(16px); z-index: 9999; 
+         justify-content: center; align-items: center; padding: 20px; overflow-y: auto;">
+        
+        <div style="background: rgba(20,15,40,0.98); border: 1px solid rgba(255,255,255,0.08); 
+                    border-radius: 32px; padding: 40px; max-width: 600px; width: 100%; 
+                    box-shadow: 0 30px 80px rgba(0,0,0,0.9); position: relative; max-height: 90vh; overflow-y: auto;">
+            
+            <!-- Close Button -->
+            <button onclick="closeProject('landing')" style="position: sticky; top: 0; float: right; 
+                    background: rgba(255,45,117,0.2); border: none; color: #ff2d75; 
+                    width: 44px; height: 44px; border-radius: 50%; font-size: 22px; cursor: pointer;
+                    transition: 0.3s; margin-bottom: 10px; z-index: 10;"
+                    onmouseover="this.style.background='#ff2d75'; this.style.color='#fff';"
+                    onmouseout="this.style.background='rgba(255,45,117,0.2)'; this.style.color='#ff2d75';">
+                ✕
+            </button>
+            
+            <div style="clear: both;"></div>
+            
+            <div style="text-align: center;">
+                <i class="fas fa-paint-brush fa-4x mb-3" style="color:#00d4ff;"></i>
+                <h2 style="color: #f0ecfa; font-weight: 700;">Landing Page</h2>
+                <p style="color: #b9b0d0; font-size: 1.05rem; line-height: 1.8;">
+                    A creative landing page with modern glass-morphism design and smooth animations.
+                </p>
+                
+                <div style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 20px; margin: 20px 0; text-align: left;">
+                    <h4 style="color: #00d4ff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-palette me-2"></i>Design Features
+                    </h4>
+                    <ul style="color: #d5cee6; list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                            <i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px;"></i>Glass-morphism Design
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                            <i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px;"></i>Neon UI Elements
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
+                            <i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px;"></i>Responsive Design
+                        </li>
+                        <li style="padding: 8px 0;">
+                            <i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px;"></i>Smooth Animations
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Landing Page Preview -->
+                <div style="background: linear-gradient(135deg, #0a0a1a, #1a0a2e); border-radius: 16px; 
+                            padding: 30px; border: 1px solid rgba(0,212,255,0.1); margin: 20px 0;">
+                    <h3 style="background: linear-gradient(to right, #f0ecfa, #00d4ff, #ff2d75);
+                               -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                               font-weight: 800; font-size: 1.5rem;">
+                        ✨ Creative Landing Page
+                    </h3>
+                    <p style="color: #b9b0d0;">Modern glass-morphism design with neon accents</p>
+                    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                        <span style="background: rgba(0,212,255,0.1); padding: 6px 16px; border-radius: 20px; 
+                                    color: #00d4ff; font-size: 0.8rem; border: 1px solid rgba(0,212,255,0.1);">
+                            <i class="fas fa-circle" style="color: #00d4ff; font-size: 0.5rem;"></i> Glass
+                        </span>
+                        <span style="background: rgba(255,45,117,0.1); padding: 6px 16px; border-radius: 20px; 
+                                    color: #ff2d75; font-size: 0.8rem; border: 1px solid rgba(255,45,117,0.1);">
+                            <i class="fas fa-circle" style="color: #ff2d75; font-size: 0.5rem;"></i> Neon
+                        </span>
+                        <span style="background: rgba(255,255,255,0.04); padding: 6px 16px; border-radius: 20px; 
+                                    color: #b9b0d0; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.04);">
+                            <i class="fas fa-circle" style="color: #b9b0d0; font-size: 0.5rem;"></i> Modern
+                        </span>
+                    </div>
+                </div>
+                
+                <button onclick="closeProject('landing')" class="btn btn-neon">
+                    <i class="fas fa-times me-2"></i>Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-5">
+        <div class="container">
+            <div class="section-title-wrapper anim-fade-right" id="certTitle">
+                <h2 class="section-title">Certifications</h2>
+            </div>
+            <ul class="list-group cert-list">
+                <li class="list-group-item anim-fade-right delay-1"><i class="fas fa-check-circle me-3" style="color:#00d4ff;"></i>Web Development Certificate</li>
+                <li class="list-group-item anim-fade-right delay-2"><i class="fas fa-check-circle me-3" style="color:#00d4ff;"></i>HTML & CSS Certification</li>
+                <li class="list-group-item anim-fade-right delay-4"><i class="fas fa-check-circle me-3" style="color:#00d4ff;"></i>JavaScript Basics Certificate</li>
+                <li class="list-group-item anim-fade-right delay-5"><i class="fas fa-check-circle me-3" style="color:#00d4ff;"></i>C Programming Certificate</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row g-5 align-items-stretch">
+                <div class="col-lg-5 anim-bounce-in" id="contactLeft">
+                    <div class="contact-card">
+                        <h2 class="mb-4"><i class="fas fa-envelope me-2" style="color:#00d4ff;"></i>Get In Touch</h2>
+                        <div class="contact-info">
+                            <p><i class="fas fa-user"></i> <strong>Tejashri Gavhane</strong></p>
+                            <p><i class="fas fa-envelope"></i> gavhanetejashri126@gmail.com</p>
+                            <p><i class="fas fa-phone"></i> +91 8830054143</p>
+                            <p><i class="fas fa-location-dot"></i> Shivaji Polytechnic, Sangola</p>
+                        </div>
+
+                        <a href="https://wa.me/918830054143?text=Hi%20Tejashri%2C%20I%20visited%20your%20portfolio!" target="_blank" class="whatsapp-contact-icon">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+
+                        <hr class="border-secondary mt-4" />
+                        
+                        <div>
+                            <!-- GitHub Link - # la tumcha link ne replace kara -->
+                            <a href="https://github.com/tejashri-gavhane" target="_blank" class="social-btn">
+                                <i class="fab fa-github me-2"></i>GitHub
+                            </a>
+                            
+                            <!-- LinkedIn Link - # la tumcha link ne replace kara -->
+                            <a href="https://www.linkedin.com/in/tejashri-gavhane" target="_blank" class="social-btn">
+                                <i class="fab fa-linkedin-in me-2"></i>LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-lg-7 anim-bounce-in delay-1" id="contactRight">
+    <div class="contact-card">
+        <h2 class="mb-4"><i class="fas fa-paper-plane me-2" style="color:#00d4ff;"></i>Send a Message</h2>
+        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="mb-3">
+                <input type="text" class="form-control form-control-custom" placeholder="Full Name" required />
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control form-control-custom" placeholder="Email Address" required />
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control form-control-custom" placeholder="Subject" />
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control form-control-custom" rows="4" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <!-- ===== CAPTCHA - YETHYE ADD KARA (Textarea ani Button chya darmyan) ===== -->
+            <div class="mb-3 captcha-box">
+                <span class="captcha-text" id="captchaText">AB4C</span>
+                <div class="captcha-input">
+                    <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" />
+                </div>
+                <button type="button" class="captcha-refresh" id="refreshCaptcha">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+
+            <button type="submit" class="btn btn-send w-100">
+                <i class="fas fa-paper-plane me-2"></i>Send Message
+            </button>
+        </form>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">© 2026 Tejashri Gavhane · crafted with <i class="fas fa-heart" style="color:#00d4ff;"></i></p>
+        </div>
+    </footer>
+
+    <!-- FIXED BOTTOM BAR -->
+    <div class="fixed-bottom-bar">
+        <div class="left-icon">
+            <a href="https://wa.me/918830054143?text=Hi%20Tejashri%2C%20I%20visited%20your%20portfolio!" target="_blank" class="wa-float-link" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="wa-tooltip">Chat on WhatsApp</span>
+            </a>
+        </div>
+        <div class="right-icon">
+            <button id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script>
+        // ===== SCROLL TO TOP =====
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+            revealOnScroll();
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // ===== CONTACT FORM =====
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('contactForm');
+            const name = form.querySelector('input[placeholder="Full Name"]').value.trim();
+            const email = form.querySelector('input[placeholder="Email Address"]').value.trim();
+            const subject = form.querySelector('input[placeholder="Subject"]').value.trim();
+            const message = form.querySelector('textarea').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            const whatsappMsg =
+                `Hello Tejashri!%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Subject:* ${encodeURIComponent(subject || 'General Inquiry')}%0A*Message:* ${encodeURIComponent(message)}`;
+            const phoneNumber = '918830054143';
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMsg}`;
+
+            window.open(whatsappURL, '_blank');
+            alert('✅ Your message has been prepared! Redirecting to WhatsApp...');
+            form.reset();
+        }
+
+        // ===== SCROLL REVEAL =====
+        function revealOnScroll() {
+            const animElements = document.querySelectorAll(
+                '.anim-fade-up, .anim-fade-left, .anim-fade-right, .anim-zoom-in, .anim-flip-in, .anim-bounce-in, .anim-slide-down'
+            );
+            animElements.forEach((el) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('load', function() {
+            revealOnScroll();
+            animateProgressBars();
+        });
+
+        // ===== PROGRESS BARS =====
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        }
+
+        const skillsSection = document.getElementById('skills');
+        let skillsAnimated = false;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !skillsAnimated) {
+                    skillsAnimated = true;
+                    const bars = document.querySelectorAll('#skills .progress-bar');
+                    bars.forEach((bar, index) => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 300 + (index * 150));
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ===== MODAL FUNCTIONS =====
+        // Get modal instance
+        const modalElement = document.getElementById('resumeModal');
+        const modal = new bootstrap.Modal(modalElement);
+
+        // Download button - opens modal
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            modal.show();
+        });
+
+        // Download from modal
+        document.getElementById('downloadFromModal').addEventListener('click', function() {
+            // Get resume content
+            const content = document.querySelector('.resume-content');
+            const htmlContent = content.innerHTML;
+
+            // Create print window
+            const printWindow = window.open('', '_blank', 'width=800,height=600');
+            printWindow.document.write(`
+                
+            `);
+            printWindow.document.close();
+
+            // Close modal
+            modal.hide();
+        });
+
+        // Close modal with custom close buttons
+        document.querySelectorAll('.btn-close, .btn-close-modal').forEach(btn => {
+            btn.addEventListener('click', function() {
+                modal.hide();
+            });
+        });
+    </script>
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,mr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+}
+</script>
+<script>
+    // ===== PROJECT POPUP FUNCTIONS =====
+function openProject(projectName) {
+    // Close all popups first
+    closeAllProjects();
+    
+    // Open the selected project
+    const popup = document.getElementById(projectName + 'Popup');
+    if (popup) {
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        // If calculator, reset display
+        if (projectName === 'calculator') {
+            const display = document.getElementById('calcDisplayPopup');
+            if (display) {
+                display.value = '0';
+                window.calcDisplayPopupValue = '';
+                window.calcResultPopupValue = '';
+            }
+        }
+    }
+}
+
+function closeProject(projectName) {
+    const popup = document.getElementById(projectName + 'Popup');
+    if (popup) {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function closeAllProjects() {
+    const popups = ['portfolioPopup', 'calculatorPopup', 'landingPopup'];
+    popups.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+    document.body.style.overflow = 'auto';
+}
+
+// Close popup when clicking outside
+document.addEventListener('click', function(e) {
+    const popups = ['portfolioPopup', 'calculatorPopup', 'landingPopup'];
+    popups.forEach(id => {
+        const popup = document.getElementById(id);
+        if (popup && popup.style.display === 'flex' && e.target === popup) {
+            closeProject(id.replace('Popup', ''));
+        }
+    });
+});
+
+// ===== CALCULATOR LOGIC FOR POPUP =====
+window.calcDisplayPopupValue = '';
+window.calcResultPopupValue = '';
+
+function calcInputPopup(value) {
+    const display = document.getElementById('calcDisplayPopup');
+    if (!display) return;
+    
+    if (value === 'C') {
+        window.calcDisplayPopupValue = '';
+        window.calcResultPopupValue = '';
+        display.value = '0';
+        return;
+    }
+    
+    if (value === '⌫') {
+        window.calcDisplayPopupValue = window.calcDisplayPopupValue.slice(0, -1);
+        display.value = window.calcDisplayPopupValue || '0';
+        return;
+    }
+    
+    if (value === '±') {
+        if (window.calcDisplayPopupValue.startsWith('-')) {
+            window.calcDisplayPopupValue = window.calcDisplayPopupValue.slice(1);
+        } else if (window.calcDisplayPopupValue && window.calcDisplayPopupValue !== '0') {
+            window.calcDisplayPopupValue = '-' + window.calcDisplayPopupValue;
+        }
+        display.value = window.calcDisplayPopupValue || '0';
+        return;
+    }
+    
+    if (value === '=') {
+        try {
+            let expr = window.calcDisplayPopupValue.replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-');
+            window.calcResultPopupValue = Function('"use strict"; return (' + expr + ')')();
+            if (!Number.isInteger(window.calcResultPopupValue)) {
+                window.calcResultPopupValue = parseFloat(window.calcResultPopupValue.toFixed(10));
+            }
+            display.value = window.calcResultPopupValue;
+            window.calcDisplayPopupValue = String(window.calcResultPopupValue);
+        } catch (e) {
+            display.value = 'Error';
+            window.calcDisplayPopupValue = '';
+        }
+        return;
+    }
+    
+    const lastChar = window.calcDisplayPopupValue.slice(-1);
+    const operators = ['+', '−', '×', '÷', '%'];
+    if (operators.includes(lastChar) && operators.includes(value)) return;
+    
+    if (value === '.') {
+        const parts = window.calcDisplayPopupValue.split(/[\+\−\×\÷\%]/);
+        const lastPart = parts[parts.length - 1];
+        if (lastPart.includes('.')) return;
+    }
+    
+    if (window.calcDisplayPopupValue === '0' && value !== '.' && !operators.includes(value)) {
+        window.calcDisplayPopupValue = '';
+    }
+    
+    window.calcDisplayPopupValue += value;
+    display.value = window.calcDisplayPopupValue;
+}
+
+// Keyboard support for calculator popup
+document.addEventListener('keydown', function(e) {
+    const popup = document.getElementById('calculatorPopup');
+    if (!popup || popup.style.display !== 'flex') return;
+    
+    const display = document.getElementById('calcDisplayPopup');
+    if (!display) return;
+    
+    const key = e.key;
+    
+    if (key === 'Enter') {
+        e.preventDefault();
+        calcInputPopup('=');
+        return;
+    }
+    if (key === 'Backspace') {
+        e.preventDefault();
+        calcInputPopup('⌫');
+        return;
+    }
+    if (key === 'Escape') {
+        closeProject('calculator');
+        return;
+    }
+    
+    const validKeys = ['0','1','2','3','4','5','6','7','8','9','.','+','-','*','/','%'];
+    if (validKeys.includes(key)) {
+        e.preventDefault();
+        let mapped = key;
+        if (key === '*') mapped = '×';
+        if (key === '/') mapped = '÷';
+        if (key === '-') mapped = '−';
+        calcInputPopup(mapped);
+    }
+});
+</script>
+<script>
+            // ===== CAPTCHA LOGIC =====
+        const captchaText = document.getElementById('captchaText');
+        const refreshBtn = document.getElementById('refreshCaptcha');
+        const captchaInput = document.getElementById('captchaInput');
+
+        function generateCaptcha() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let captcha = '';
+            for (let i = 0; i < 4; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            captchaText.textContent = captcha;
+        }
+
+        // Refresh CAPTCHA on button click
+        if (refreshBtn) {
+            refreshBtn.addEventListener('click', function() {
+                generateCaptcha();
+                captchaInput.value = '';
+                captchaInput.focus();
+            });
+        }
+
+        // Generate initial CAPTCHA
+        generateCaptcha();
+
+        // ===== CONTACT FORM WITH CAPTCHA VALIDATION =====
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('contactForm');
+            const name = form.querySelector('input[placeholder="Full Name"]').value.trim();
+            const email = form.querySelector('input[placeholder="Email Address"]').value.trim();
+            const subject = form.querySelector('input[placeholder="Subject"]').value.trim();
+            const message = form.querySelector('textarea').value.trim();
+            
+            // Get CAPTCHA values
+            const enteredCaptcha = captchaInput.value.trim().toUpperCase();
+            const actualCaptcha = captchaText.textContent.trim().toUpperCase();
+
+            // Validate required fields
+            if (!name || !email || !message) {
+                alert('⚠️ Please fill in all required fields.');
+                return;
+            }
+
+            // Validate CAPTCHA
+            if (enteredCaptcha !== actualCaptcha) {
+                alert('❌ Invalid CAPTCHA. Please try again.');
+                generateCaptcha();
+                captchaInput.value = '';
+                captchaInput.focus();
+                return;
+            }
+
+            // If all valid, send to WhatsApp
+            const whatsappMsg =
+                `Hello Tejashri!%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Subject:* ${encodeURIComponent(subject || 'General Inquiry')}%0A*Message:* ${encodeURIComponent(message)}`;
+            const phoneNumber = '918830054143';
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMsg}`;
+
+            window.open(whatsappURL, '_blank');
+            alert('✅ Your message has been prepared! Redirecting to WhatsApp...');
+            form.reset();
+            generateCaptcha();
+            captchaInput.value = '';
+        }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>                                 
